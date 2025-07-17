@@ -1,0 +1,25 @@
+@CQRSDemo_HostAddress = https://localhost:7146
+
+GET {{CQRSDemo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{CQRSDemo_HostAddress}}/api/product/GetAll
+
+###
+
+@id=3
+GET {{CQRSDemo_HostAddress}}/api/product/GetById/{{id}}
+
+###
+
+POST {{CQRSDemo_HostAddress}}/api/product/Create
+Content-Type: application/json
+
+{
+  "name": "ProCan",
+  "price": 40
+}
+
+###
